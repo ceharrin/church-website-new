@@ -1,0 +1,72 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Design tokens — stdionysios.org GOARCH t03 template (inline :root on source site) */
+:root {
+  --primary-font: "Lato", system-ui, sans-serif;
+  --accent-font: "Judson", Georgia, "Times New Roman", serif;
+  --primary-color: rgb(115, 22, 40);
+  --primary-color-low-opacity: rgba(115, 22, 40, 0.3);
+  --primary-color-high-opacity: rgba(115, 22, 40, 0.7);
+  --secondary-color: rgb(74, 14, 26);
+  --secondary-color-low-opacity: rgba(74, 14, 26, 0.5);
+  --dark-color: rgb(54, 10, 19);
+  --dark-color-low-opacity: rgba(54, 10, 19, 0.5);
+  --highlight-color: rgb(226, 198, 159);
+  --accent-color: rgb(253, 189, 92);
+
+  --font-body: var(--primary-font);
+  --font-display: var(--accent-font);
+  --color-primary: var(--primary-color);
+  --color-secondary: var(--secondary-color);
+  --color-dark: var(--dark-color);
+  --color-highlight: var(--highlight-color);
+  --color-accent: var(--accent-color);
+  --color-white: #fff;
+  --color-muted: rgba(54, 10, 19, 0.72);
+  --color-muted: color-mix(in srgb, var(--dark-color) 72%, transparent);
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: 1.0625rem;
+  line-height: 1.6;
+  font-weight: 400;
+  color: var(--color-dark);
+  background-color: var(--highlight-color);
+  overflow-x: clip;
+}
+
+#root {
+  min-height: 100vh;
+  min-height: 100dvh;
+}
+
+a {
+  color: var(--color-primary);
+}
+
+a:hover {
+  color: var(--secondary-color);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
