@@ -27,7 +27,7 @@ export function ClergyPage() {
           <div className="clergy-photo-wrap">
             <img
               className="clergy-photo"
-              src="/priest.JPG"
+              src="/images/priest.JPG"
               alt="V. Rev. Archimandrite Philotheos Tomczewski, Proistamenos"
               width={580}
               height={725}

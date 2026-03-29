@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
-import { SERVANT_GIVING_DONATE_URL, SERVANT_GIVING_VIDEO_URL } from "../constants";
+import { SERVANT_GIVING_DONATE_URL, SERVANT_GIVING_VIDEO_URL } from "../config/constants";
 
 function ServantKeeperWord() {
   return (

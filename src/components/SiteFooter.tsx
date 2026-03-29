@@ -15,8 +15,7 @@ export function SiteFooter() {
         <a href="mailto:father@stdionysios.org">Email the parish</a>
       </p>
       <p className="footer-attribution">
-        Powered by the spirit of service in the Greek Orthodox Archdiocese of America — website
-        design inspired by parish outreach; content reflects{" "}
+        Powered by the spirit of service in the Greek Orthodox Archdiocese of America; content reflects{" "}
         <a href="https://stdionysios.org" target="_blank" rel="noreferrer">
           stdionysios.org
         </a>

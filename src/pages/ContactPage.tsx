@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
-import { NEWSLETTER_URL, PARISH_MAP_EMBED_URL } from "../constants";
+import { NEWSLETTER_URL, PARISH_MAP_EMBED_URL } from "../config/constants";
 
 export function ContactPage() {
   useEffect(() => {

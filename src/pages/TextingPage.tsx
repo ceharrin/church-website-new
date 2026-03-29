@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
-import { TEXT_TO_GIVE_INSTRUCTIONS_URL } from "../constants";
+import { TEXT_TO_GIVE_INSTRUCTIONS_URL } from "../config/constants";
 
 export function TextingPage() {
   useEffect(() => {
