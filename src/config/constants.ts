@@ -1,5 +1,9 @@
 export const FACEBOOK_URL =
   "https://www.facebook.com/StDionysiosOrthodoxChristianChurch/";
+
+/** Parish YouTube live (channel matches stdionysios.org homepage embed) */
+export const PARISH_YOUTUBE_LIVE_URL =
+  "https://www.youtube.com/channel/UCDu4lxuBmWGOxbGgyCzXGNQ/live";
 /** Parish newsletter signup (Mailchimp), from stdionysios.org contact page */
 export const NEWSLETTER_URL = "http://eepurl.com/dIioXr";
 /** Google Maps embed iframe (no API key; standard Maps embed URL) */
