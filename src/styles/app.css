@@ -676,39 +676,6 @@
   word-break: break-word;
 }
 
-.quote-block {
-  padding: 1.5rem;
-  background: linear-gradient(
-    135deg,
-    color-mix(in srgb, var(--color-highlight) 50%, transparent) 0%,
-    color-mix(in srgb, var(--color-accent) 20%, transparent) 100%
-  );
-  border-radius: var(--radius);
-  border: 1px solid var(--border-primary-subtle);
-}
-
-@media (min-width: 480px) {
-  .quote-block {
-    padding: 2rem;
-  }
-}
-
-.quote-block blockquote {
-  margin: 0;
-  font-style: italic;
-  font-size: 1.0625rem;
-  color: var(--color-dark);
-}
-
-.quote-block cite {
-  display: block;
-  margin-top: 1rem;
-  font-style: normal;
-  font-weight: 700;
-  color: var(--color-primary);
-  font-size: 0.9rem;
-}
-
 .site-footer {
   background: var(--color-dark);
   color: rgba(255, 255, 255, 0.88);

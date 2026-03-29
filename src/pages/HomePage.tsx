@@ -231,14 +231,6 @@ export function HomePage() {
             We would love to see you at Orthros, Vespers, or Divine Liturgy. For questions about
             baptisms, weddings, or pastoral care, please contact the church office.
           </p>
-          <div className="quote-block">
-            <blockquote>
-              &ldquo;We have been on a spiritual journey taking us many years and many places
-              seeking the Church of the early centuries. It is with great joy that we can say we
-              have found the true light shining in the Holy Orthodox Church.&rdquo;
-            </blockquote>
-            <cite>— A parish family</cite>
-          </div>
         </div>
       </section>
     </>
