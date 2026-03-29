@@ -27,8 +27,7 @@ export function HomePage() {
             Welcome to St. Dionysios
           </h1>
           <p className="hero-sub">
-            We are glad you are here. We hope you will join us for worship so we can meet you in
-            person and share the light of Orthodox Christian faith in Overland Park.
+            Please join us for worship to share the light of the Orthodox Christian faith in Overland Park.
           </p>
           <div className="hero-actions">
             <a className="btn btn-primary" href="#services">
@@ -101,7 +100,7 @@ export function HomePage() {
           <h2 className="section-title">Divine service schedule</h2>
           <p className="section-lead">
             Regular weekly services at St. Dionysios. For feast days and seasonal changes, see the
-            parish calendar or announcements.
+            events below or our parish calendar.
           </p>
           <div className="two-col">
             <div className="schedule-block">
@@ -125,8 +124,8 @@ export function HomePage() {
         <div className="section-inner">
           <h2 className="section-title">Upcoming events</h2>
           <p className="section-lead">
-            Highlights from parish life. For service times, feast days, and parish activities, see
-            the full calendar.
+            Highlights from parish life. For service times, feast days, and parish activities, see the{" "}
+            <Link to="/calendar">full calendar</Link>.
           </p>
           <ul className="events-list">
             <li>
