@@ -92,7 +92,7 @@ export function SiteHeader() {
             <div className="header-goa-wrap">
               <img
                 className="header-goa-logo"
-                src="/images/goa-logo-white.png"
+                src={`${import.meta.env.BASE_URL}images/goa-logo-white.png`}
                 alt="Greek Orthodox Archdiocese of America"
                 width={125}
                 height={125}
