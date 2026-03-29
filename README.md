@@ -30,9 +30,11 @@ The repo includes a workflow that deploys the production build to **GitHub Pages
 
 1. In the GitHub repo: **Settings → Pages** → **Build and deployment** → **Source**: **GitHub Actions** (not “Deploy from a branch”).
 2. Push to `main` (or merge a PR). The workflow in `.github/workflows/deploy-github-pages.yml` runs `npm ci`, `npm run build`, copies `dist/index.html` to `dist/404.html` (so React Router URLs work on refresh), and publishes `dist/`.
-3. The public URL is **`https://<username>.github.io/<repository>/`** (for example `https://ceharrin.github.io/church-website-new/` if that is your username and repo name).
+3. The public URL is **`https://<username>.github.io/<repository>/`** (for example `https://ceharrin.github.io/church-website-new/`). Always open that **project** URL (with the repo name in the path), not `https://<username>.github.io/` alone.
 
 **How it works:** In GitHub Actions, `GITHUB_REPOSITORY` is set automatically, and `vite.config.ts` uses it to set Vite’s `base` to `/<repo>/`. `src/main.tsx` passes the matching `basename` to `BrowserRouter`. Local `npm run build` uses `base` `/` unless you set `GITHUB_REPOSITORY` or `VITE_BASE_PATH` (for example `VITE_BASE_PATH=/church-website-new/ npm run build` to mimic Pages locally).
+
+**Troubleshooting — 404 on `/src/main.tsx` (Network tab):** The live site is serving the **unbuilt** root `index.html` from the repo (with `/src/main.tsx`), not the Vite output in `dist/`. That happens when **Pages → Source** is set to **Deploy from a branch** (e.g. `main` / `/`) instead of **GitHub Actions**. The branch deploy publishes your **source** tree, which does not include a runnable bundle. **Fix:** In **Settings → Pages**, set **Source** to **GitHub Actions** only and remove branch-based publishing. Wait for the “Deploy to GitHub Pages” workflow to finish (green check on the **Actions** tab), then hard-refresh the site. You can re-run the workflow manually (**Actions → workflow → Run workflow**) if needed.
 
 ## Project layout
 
