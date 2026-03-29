@@ -24,6 +24,16 @@ Requires **Node.js** and npm. From the project root:
 | `npm run preview` | Serve the `dist/` build locally to verify production output |
 | `npm run lint` | Run ESLint |
 
+### GitHub Pages (short-term preview)
+
+The repo includes a workflow that deploys the production build to **GitHub Pages** on every push to `main`. This is intended for review before the site is hosted on the parish’s permanent server.
+
+1. In the GitHub repo: **Settings → Pages** → **Build and deployment** → **Source**: **GitHub Actions** (not “Deploy from a branch”).
+2. Push to `main` (or merge a PR). The workflow in `.github/workflows/deploy-github-pages.yml` runs `npm ci`, `npm run build`, copies `dist/index.html` to `dist/404.html` (so React Router URLs work on refresh), and publishes `dist/`.
+3. The public URL is **`https://<username>.github.io/<repository>/`** (for example `https://ceharrin.github.io/church-website-new/` if that is your username and repo name).
+
+**How it works:** In GitHub Actions, `GITHUB_REPOSITORY` is set automatically, and `vite.config.ts` uses it to set Vite’s `base` to `/<repo>/`. `src/main.tsx` passes the matching `basename` to `BrowserRouter`. Local `npm run build` uses `base` `/` unless you set `GITHUB_REPOSITORY` or `VITE_BASE_PATH` (for example `VITE_BASE_PATH=/church-website-new/ npm run build` to mimic Pages locally).
+
 ## Project layout
 
 | Path | Purpose |
@@ -37,5 +47,6 @@ Requires **Node.js** and npm. From the project root:
 | `src/layouts/` | Route layouts (`SiteLayout`) |
 | `src/pages/` | Page components per route |
 | `src/config/` | App configuration and external URLs (`constants.ts`) |
-| `vite.config.ts` | Vite + React plugin |
+| `vite.config.ts` | Vite + React plugin (`base` for GitHub Pages when `GITHUB_REPOSITORY` or `VITE_BASE_PATH` is set) |
+| `.github/workflows/` | CI (e.g. deploy to GitHub Pages) |
 | `eslint.config.js` | ESLint (flat config) |
